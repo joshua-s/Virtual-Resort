@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
-    <h1 class="display-6 text-center">Virtual Resort</h1>
-    <nav class="navbar navbar-expand-lg bg-success">
+    <nav class="navbar navbar-expand-lg bg-success mb-4">
   <div class="container">
     <a class="navbar-brand" href="/">
       <i class="bi bi-buildings"></i>
@@ -19,7 +18,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
         <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
         </li>
@@ -39,7 +38,32 @@
     </div>
   </div>
 </nav>
+<div class="container">
 
+<h1 class="mb-3">The Yurts at Pacific Trails</h1>
+    
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">What is a yurt?</h5>
+        <p class="card-text">Our luxury yurts are permanent structures four feet off the ground. Each yurt has canvas walls, a wooden floor, and a roof dome that can be opened.</p>
+      </div>
+    </div>
+    
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">How are the yurts furnished?</h5>
+        <p class="card-text">Each yurt is furnished with a queen-size bed with down quilt and gas-fired stove. The luxury camping experience also includes electricity and a sink with hot and cold running water. Shower and restroom facilities are located in the lodge.</p>
+      </div>
+    </div>
+    
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">What should I bring?</h5>
+        <p class="card-text">Bring a sense of adventure and some time to relax! Most guests also pack comfortable walking shoes and plan to dress for changing weather with layers of clothing.</p>
+      </div>
+    </div>
+
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
