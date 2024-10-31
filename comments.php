@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
-    <h1 class="display-6 text-center">Virtual Resort</h1>
-    <nav class="navbar navbar-expand-lg bg-success">
+  <nav class="navbar navbar-expand-lg bg-success mb-4">
   <div class="container">
     <a class="navbar-brand" href="/">
       <i class="bi bi-buildings"></i>
@@ -19,7 +18,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
         <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
         </li>
@@ -38,7 +37,14 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav><div class="container">
+
+<h1 class="mb-3">Comments...</h1>
+
+</div>
+
+
+<?php include 'footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
