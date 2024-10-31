@@ -40,7 +40,7 @@
 </nav>
 <div class="container">
 
-<h1 class="mb-3">Reservation...</h1>
+<h1 class="mb-3">Reserve your exclusive Yurt!</h1>
 
 </div>
 

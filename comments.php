@@ -39,7 +39,7 @@
   </div>
 </nav><div class="container">
 
-<h1 class="mb-3">Comments...</h1>
+<h1 class="mb-3">We treasure your comments!</h1>
 
 </div>
 
