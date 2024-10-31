@@ -41,10 +41,104 @@
 
 <div class="container">
 
-<h1 class="mb-3">Activities...</h1>
+<h1 class="mb-3">Activities at Pacific Trails</h1>
 
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-3">
+  <div class="col">
+    <div class="card">
+      <img src="./images/lodge.jpg" class="card-img-top" alt="The lodge." style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#lodge">
+      <div class="card-body">
+        <h5 class="card-title">The Lodge</h5>
+        <p class="card-text">This is the lodge where we have the Overlook cafe.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="./images/resort.jpg" class="card-img-top" alt="The resort." style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#resort">
+      <div class="card-body">
+        <h5 class="card-title">The Resort</h5>
+        <p class="card-text">This is the resort where all of our yurts are located.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="./images/view.jpg" class="card-img-top" alt="The view." style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#view">
+      <div class="card-body">
+        <h5 class="card-title">The View</h5>
+        <p class="card-text">This is the view from right oustide your yurt.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="./images/yurt.jpg" class="card-img-top" alt="The yurt." style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#yurt">
+      <div class="card-body">
+        <h5 class="card-title">The Yurt</h5>
+        <p class="card-text">A picture from inside our wonderful yurt.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
+
+<p><em>Images are sourced from <a href="https://www.treebonesresort.com/">TreeBones Resort</a>.</em></p>
+</div>
+
+
+<div class="modal fade" id="lodge" tabindex="-1" aria-labelledby="lodgeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="lodgeLabel">The Lodge</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./images/lodge.jpg" class="img-fluid mx-auto d-block" style="height: 100%" alt="The lodge.">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="resort" tabindex="-1" aria-labelledby="resortLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="resortLabel">The Resort</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./images/resort.jpg" class="img-fluid mx-auto d-block" style="height: 100%" alt="The resort.">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="view" tabindex="-1" aria-labelledby="viewLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="viewLabel">The View</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./images/view.jpg" class="img-fluid mx-auto d-block" style="height: 100%" alt="The view.">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="yurt" tabindex="-1" aria-labelledby="yurtLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="yurtLabel">The Yurt</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./images/yurt.jpg" class="img-fluid mx-auto d-block" style="height: 100%" alt="The yurt.">
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php include 'footer.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
