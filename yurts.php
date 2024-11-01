@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         footer {
-          width: 100%;
-          text-align: center;
           position: fixed;
-          bottom: 0pt;
-          width: 100%;
-          left: 0pt;
         }
     </style>
   </head>
