@@ -39,7 +39,7 @@
   </div>
 </nav>
 <div class="container">
-<h1 class="mb-3">Welcome to the Virtual Resort!</h1>
+<h1 class="mb-3">Welcome to Virtual Resort!</h1>
     
 <p>Virtual Resort offers a special lodging experience on the New Jersey Eastern Coast. Relax in serenity with Panoramic views of the Atlantic Ocean!</p>
     <p>
@@ -52,7 +52,7 @@
         </ul>
     </p>
 
-    <p><b>Virtual Resourt</b><br>
+    <p><b>Virtual Resort</b><br>
         1 Normal Ave<br>
         Montclair, NJ 07043<br>
         973-655-4166</p>
