@@ -101,11 +101,15 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label  class="col-12 col-sm-4 col-form-label">Room Type:</label>
-                <div class="col-12 col-sm-8">
-                    <input type="text" class="form-control" id="room" required>
-                </div>
-            </div>
+              <label class="col-12 col-sm-4 col-form-label">Room Type:</label>
+              <div class="col-12 col-sm-8">
+                <select class="form-control" id="roomType" required>
+                  <option value="">Select Room Type:</option>
+                  <option value="king">King</option>
+                  <option value="queen">Queen</option>
+                  <option value="suite">Suite</option>
+                </select>
+              </div>
             <div class="form-group row">
                 <label  class="col-12 col-sm-4 col-form-label">Phone: </label>
                 <div class="col-12 col-sm-8">
