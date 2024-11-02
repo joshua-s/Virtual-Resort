@@ -5,7 +5,7 @@
           text-align: center;
           position: bottom;
           bottom: 0pt;
-          width: 200%;
+          width: 100%;
           left: 0pt;
         }
       </style>
