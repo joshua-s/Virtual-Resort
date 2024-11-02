@@ -6,13 +6,8 @@
     <title>Comments - Virtual Resort</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <style>
-        footer {
-          position: fixed;
-        }
-    </style>
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
   <nav class="navbar navbar-expand-lg bg-success mb-4">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -42,9 +37,40 @@
       </ul>
     </div>
   </div>
-</nav><div class="container">
+</nav><div class="container mb-4">
 
 <h1 class="mb-3">We treasure your comments!</h1>
+        <form>
+            <div class="row mb-3">
+                <label  class="col-sm-3 col-form-label">Name:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="firstName" required autofocus>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label  class="col-sm-3 col-form-label">Phone:</label>
+                <div class="col-sm-9">
+                    <input type="tel" class="form-control" id="phone"  placeholder="(###) ###-####" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label  class="col-sm-3 col-form-label">E-mail Address:</label>
+                <div class="col-sm-9">
+                    <input type="email" class="form-control" id="mail" placeholder="name@domain.com" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label  class="col-sm-3 col-form-label">Your Comments:</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" id="requests" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-9 offset-sm-3">
+                    <button type="submit" class="btn btn-primary">Submit Comments</button>
+                </div>
+            </div>
+        </form>
 
 </div>
 
