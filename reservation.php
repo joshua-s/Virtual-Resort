@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
-    <meta  content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Reservation - Virtual Resort</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -40,7 +40,110 @@
 </nav>
 <div class="container mb-4">
         <h1 class="mb-3">Reservation at Virtual Resort</h1>
-        <form method="post" action="reservation_conf.php">
+      <?php
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $firstName = htmlspecialchars($_POST['firstName']);
+        $lastName = htmlspecialchars($_POST['lastName']);
+        $numberStreet = htmlspecialchars($_POST['numberStreet']);
+        $city = htmlspecialchars($_POST['city']);
+        $state = htmlspecialchars($_POST['state']);
+        $zip = htmlspecialchars($_POST['zip']);
+        $checkIn = htmlspecialchars($_POST['checkIn']);
+        $checkOut = htmlspecialchars($_POST['checkOut']);
+        $people = htmlspecialchars($_POST['people']);
+        $roomType = htmlspecialchars($_POST['roomType']);
+        $phone = htmlspecialchars($_POST['phone']);
+        $mail = htmlspecialchars($_POST['mail']);
+        $payment = htmlspecialchars($_POST['payment']);
+        $cardNumber = htmlspecialchars($_POST['cardNumber']);
+        $requests = htmlspecialchars($_POST['requests']);
+        $datediff = (strtotime($checkOut) - strtotime($checkIn)) / 86400;
+
+        if($datediff == 0) {
+          $datediff = 1;
+        }
+        if($roomType == "King"){
+          $total = (200 * $datediff) * 1.07;
+        }
+        else if($roomType == "Queen"){
+          $total = (150 * $datediff) * 1.07;
+        }
+        else if($roomType == "Suite"){
+          $total = (300 * $datediff) * 1.07;
+        }
+        ?>
+
+        <div class="alert alert-success" role="alert">Dear <?=$firstName?> <?=$lastName?>, thank you for your reservation! Please see your requested booking details below:</div>
+
+        <table class='table table-striped table-dark'>
+          <tr>
+            <td>First Name</td>
+            <td><?=$firstName?></td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td><?=$lastName?></td>
+          </tr>
+          <tr>
+            <td>Number & Street</td>
+            <td><?=$numberStreet?></td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td><?=$city?></td>
+          </tr>
+          <tr>
+            <td>State</td>
+            <td><?=$state?></td>
+          </tr>
+          <tr>
+            <td>Zip Code</td>
+            <td><?=$zip?></td>
+          </tr>
+          <tr>
+            <td>Check-In Date</td>
+            <td><?=$checkIn?></td>
+          </tr>
+          <tr>
+            <td>Check-Out Date</td>
+            <td><?=$checkOut?></td>
+          </tr>
+          <tr>
+            <td>Number of People</td>
+            <td><?=$people?></td>
+          </tr>
+          <tr>
+            <td>Room Type</td>
+            <td><?=strtoupper($roomType)?></td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td><?=$phone?></td>
+          </tr>
+          <tr>
+            <td>E-mail Address</td>
+            <td><?=$mail?></td>
+          </tr>
+          <tr>
+            <td>Payment Method</td>
+            <td><?=strtoupper($payment)?></td>
+          </tr>
+          <tr>
+            <td>Card Number</td>
+            <td><?=$cardNumber?></td>
+          </tr>
+          <tr>
+            <td>Special Requests</td>
+            <td><?=$requests?></td>
+          </tr>
+          <tr>
+            <td>Total Charge</td>
+            <td><?=number_format($total, 2)?></td>
+          </tr>
+        </table>
+      <?php } else {
+      ?>
+        <form method="post" action="">
         <div class="row mb-3">
           <label class="col-sm-3 col-form-label">First Name:</label>
           <div class="col-sm-9">
@@ -133,7 +236,7 @@
         <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Card Number:</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" id="cardNumber" name="cardNumber" pattern="\d{16}" placeholder="Enter 16 Digits" required>
+            <input type="tel" class="form-control" id="cardNumber" name="cardNumber" pattern="\d{16}" placeholder="xxxx xxxx xxxx xxxx" required>
           </div>
         </div>
         <div class="row mb-3">
@@ -149,6 +252,7 @@
                 </div>
             </div>
         </form>
+        <?php } ?>
     </div>
     <?php include 'footer.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
