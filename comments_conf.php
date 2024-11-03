@@ -55,6 +55,9 @@
         } else if (!empty($email)){
           echo "<h1>Dear $email, thank you for the comments.</h1>";
         }
+        else {
+          echo "<h1>Dear guest, thank you for the comments.</h1>";
+        }
       }
     ?>
     <?php include 'footer.php'; ?>
