@@ -41,7 +41,7 @@
 </nav><div class="container mb-4">
 
 <h1 class="mb-3">We treasure your comments!</h1>
-        <form>
+        <form method="post" action="comments_conf.php">
             <div class="row mb-3">
                 <label  class="col-sm-3 col-form-label">Name:</label>
                 <div class="col-sm-9">
@@ -72,12 +72,8 @@
                 </div>
             </div>
         </form>
-
 </div>
-
-
-<?php include 'footer.php';?>
-
+    <?php include 'footer.php';?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

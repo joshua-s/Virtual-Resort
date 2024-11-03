@@ -40,108 +40,108 @@
 </nav>
 <div class="container mb-4">
         <h1 class="mb-3">Reservation at Virtual Resort</h1>
-        <form>
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">First Name:</label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control" id="firstName"  required autofocus>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label  class="col-sm-3 col-form-label">Last Name:</label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control" id="lastName"  required>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label  class="col-sm-3 col-form-label">Number & Street:</label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control" id="numberStreet"  required>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label  class="col-sm-3 col-form-label">City:</label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control" id="city"  required>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label  class="col-sm-3 col-form-label">State:</label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control" id="state"  required>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label  class="col-sm-3 col-form-label">Zip Code:</label>
-                <div class="col-sm-9">
-                    <input type="number" class="form-control" id="zip"  required>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label  class="col-sm-3 col-form-label">Check-In Date:</label>
-                <div class="col-sm-9">
-                    <input type="date" class="form-control" id="checkIn"  required>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label  class="col-sm-3 col-form-label">Check-Out Date:</label>
-                <div class="col-sm-9">
-                    <input type="date" class="form-control" id="checkOut"  required>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label  class="col-sm-3 col-form-label">Number of People:</label>
-                <div class="col-sm-9">
-                    <input type="number" class="form-control" id="people" required>
-                </div>
-            </div>
-            <div class="row mb-3">
-              <label class="col-sm-3 col-form-label">Room Type:</label>
-              <div class="col-sm-9">
-                <select class="form-control" id="roomType" required>
-                  <option value="">Select Room Type:</option>
-                  <option value="king">King</option>
-                  <option value="queen">Queen</option>
-                  <option value="suite">Suite</option>
-                </select>
-              </div>
-              </div>
-            <div class="row mb-3">
-                <label  class="col-sm-3 col-form-label">Phone:</label>
-                <div class="col-sm-9">
-                    <input type="tel" class="form-control" id="phone"  placeholder="(###) ###-####" required>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label  class="col-sm-3 col-form-label">E-mail Address:</label>
-                <div class="col-sm-9">
-                    <input type="email" class="form-control" id="mail" placeholder="name@domain.com" required>
-                </div>
-            </div>
-            <div class="row mb-3">
-              <label class="col-sm-3 col-form-label">Payment Method:</label>
-              <div class="col-sm-9">
-                <select class="form-control" id="payment" required>
-                  <option value="">Select Payment Method</option>
-                  <option value="visa">Visa</option>
-                  <option value="mastercard">MasterCard</option>
-                  <option value="amex">American Express</option>
-                  <option value="discover">Discover</option>
-                </select>
-              </div>
-            </div>
-            <div class="row mb-3">
-                <label  class="col-sm-3 col-form-label">Card Number: </label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control" id="cardNumber" required>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label  class="col-sm-3 col-form-label">Sepcial Requests:</label>
-                <div class="col-sm-9">
-                    <textarea class="form-control" id="requests" rows="3"></textarea>
-                </div>
-            </div>
+        <form method="post" action="reservation_conf.php">
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">First Name:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="firstName" name="firstName" required autofocus>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">Last Name:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="lastName" name="lastName" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">Number & Street:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="numberStreet" name="numberStreet" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">City:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="city" name="city" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">State:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="state" name="state" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">Zip Code:</label>
+          <div class="col-sm-9">
+            <input type="number" class="form-control" id="zip" name="zip" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">Check-In Date:</label>
+          <div class="col-sm-9">
+            <input type="date" class="form-control" id="checkIn" name="checkIn" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">Check-Out Date:</label>
+          <div class="col-sm-9">
+            <input type="date" class="form-control" id="checkOut" name="checkOut" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">Number of People:</label>
+          <div class="col-sm-9">
+            <input type="number" class="form-control" id="people" name="people" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">Room Type:</label>
+          <div class="col-sm-9">
+            <select class="form-control" id="roomType" name="roomType" required>
+              <option value="">Select Room Type:</option>
+              <option value="King">King</option>
+              <option value="Queen">Queen</option>
+              <option value="Suite">Suite</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">Phone:</label>
+          <div class="col-sm-9">
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="(###) ###-####" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">E-mail Address:</label>
+          <div class="col-sm-9">
+            <input type="email" class="form-control" id="mail" name="mail" placeholder="name@domain.com" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">Payment Method:</label>
+          <div class="col-sm-9">
+            <select class="form-control" id="payment" name="payment" required>
+              <option value="">Select Payment Method</option>
+              <option value="Visa">Visa</option>
+              <option value="Mastercard">MasterCard</option>
+              <option value="AMEX">American Express</option>
+              <option value="Discover">Discover</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">Card Number:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="cardNumber" name="cardNumber" pattern="\d{16}" placeholder="Enter 16 Digits" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">Special Requests:</label>
+          <div class="col-sm-9">
+            <textarea class="form-control" id="requests" name="requests" rows="3"></textarea>
+          </div>
+        </div>
             <div class="row mb-3">
                 <div class="col-sm-9 offset-sm-3">
                     <button type="submit" class="btn btn-primary">Reserve a Room</button>
@@ -152,5 +152,5 @@
     </div>
     <?php include 'footer.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </>
+</>
 </html>
