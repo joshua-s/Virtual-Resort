@@ -63,7 +63,7 @@
             <div class="row mb-3">
                 <label  class="col-sm-3 col-form-label">Your Comments:</label>
                 <div class="col-sm-9">
-                    <textarea class="form-control" id="requests" rows="10"></textarea>
+                    <textarea class="form-control" id="requests" rows="10" name="comments"></textarea>
                 </div>
             </div>
             <div class="row mb-3">

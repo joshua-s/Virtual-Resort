@@ -13,6 +13,37 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
+  <body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-lg bg-success mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <i class="bi bi-buildings"></i>
+      Virtual Resort
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/yurts.php">Yurts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/activities.php">Activities</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/reservation.php">Reservation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/comments.php">Comments</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     <div class="container">
       <?php
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -31,14 +62,15 @@
         $payment = htmlspecialchars($_POST['payment']);
         $cardNumber = htmlspecialchars($_POST['cardNumber']);
         $requests = htmlspecialchars($_POST['requests']);
-        if($roomType == "king"){
-          $total = (200 * $people) * 1.07;
+        $datediff = (strtotime($checkOut) - strtotime($checkIn)) / 86400;
+        if($roomType == "King"){
+          $total = (200 * $datediff) * 1.07;
         }
-        else if($roomType == "queen"){
-          $total = (150 * $people) * 1.07;
+        else if($roomType == "Queen"){
+          $total = (150 * $datediff) * 1.07;
         }
-        else if($roomType == "suite"){
-          $total = (300 * $people) * 1.07;
+        else if($roomType == "Suite"){
+          $total = (300 * $datediff) * 1.07;
         }
 
         echo "<h1>Thank you " . $firstName . " " . $lastName . " for your reservation</h1>";
