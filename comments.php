@@ -38,9 +38,28 @@
     </div>
   </div>
 </nav><div class="container mb-4">
+    <?php
+      if($_SERVER["REQUEST_METHOD"] == "POST") {
+        $comments = htmlspecialchars($_POST['comments']);
+        $name = htmlspecialchars($_POST['name']);
+        $email = htmlspecialchars($_POST['email']);
+      if (empty($comments)) {
+        echo '<div class="alert alert-danger" role="alert">Dear guest, please enter your comments.</div>';
+      } else if (!empty($comments)) {
+        if (!empty($name)){
+          echo '<div class="alert alert-success" role="alert">Dear ' . $name . ', thank you for the comments!</div>';
+        } else if (!empty($email)){
+          echo '<div class="alert alert-success" role="alert">Dear ' . $email . ', thank you for the comments!</div>';
+        }
+        else {
+          echo '<div class="alert alert-success" role="alert">Dear guest, thank you for the comments!</div>';
+        }
+      }
+    }
+    ?>
 
 <h1 class="mb-3">We treasure your comments!</h1>
-        <form method="post" action="comments_conf.php">
+        <form method="post">
             <div class="row mb-3">
                 <label  class="col-sm-3 col-form-label">Name:</label>
                 <div class="col-sm-9">
