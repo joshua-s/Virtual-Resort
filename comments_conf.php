@@ -44,11 +44,17 @@
     <?php
       if($_SERVER["REQUEST_METHOD"] == "POST") {
         $comments = htmlspecialchars($_POST['comments']);
+        $name = htmlspecialchars($_POST['name']);
+        $email = htmlspecialchars($_POST['email']);
       }
       if (empty($comments)) {
         echo "<h1>Dear guest, please enter your comments.</h1>";
-      } else {
-        echo "<h1>Dear guest, thank you for the comments.</h1>";
+      } else if (!empty($comments)) {
+        if (!empty($name)){
+          echo "<h1>Dear $name, thank you for the comments.</h1>";
+        } else if (!empty($email)){
+          echo "<h1>Dear $email, thank you for the comments.</h1>";
+        }
       }
     ?>
     <?php include 'footer.php'; ?>

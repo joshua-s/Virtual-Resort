@@ -45,19 +45,19 @@
             <div class="row mb-3">
                 <label  class="col-sm-3 col-form-label">Name:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="firstName" required autofocus>
+                    <input type="text" class="form-control" id="name" name="name" autofocus>
                 </div>
             </div>
             <div class="row mb-3">
                 <label  class="col-sm-3 col-form-label">Phone:</label>
                 <div class="col-sm-9">
-                    <input type="tel" class="form-control" id="phone"  placeholder="(###) ###-####" required>
+                    <input type="tel" class="form-control" id="phone"  placeholder="(###) ###-####">
                 </div>
             </div>
             <div class="row mb-3">
                 <label  class="col-sm-3 col-form-label">E-mail Address:</label>
                 <div class="col-sm-9">
-                    <input type="email" class="form-control" id="mail" placeholder="name@domain.com" required>
+                    <input type="email" class="form-control" id="mail" name="email" placeholder="name@domain.com">
                 </div>
             </div>
             <div class="row mb-3">
